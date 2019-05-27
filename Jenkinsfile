@@ -19,6 +19,7 @@ stage ('Push Docker Image') {
         		app.push("latest")
       	}
 }
+   
 
 stage('Run Container') {
       sh "docker run -p 8082:8080 -d saumyaprashar/devops201"
