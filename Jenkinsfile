@@ -5,6 +5,7 @@ node {
       git 'https://github.com/saumyaprashar/Devops-201.git'
       mvnHome = tool 'MAVEN_HOME'
    }
+   
 stage ('Build') {
        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
